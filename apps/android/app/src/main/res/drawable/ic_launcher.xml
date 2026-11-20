@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 银盾智鉴启动图标：盾牌 + 对勾，纯矢量，避免引入位图资源 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <path
+        android:fillColor="#174A71"
+        android:pathData="M0,0h108v108h-108z" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,18 L82,29 L82,55 C82,72 69.5,84.5 54,91 C38.5,84.5 26,72 26,55 L26,29 Z" />
+
+    <path
+        android:fillColor="#25845E"
+        android:pathData="M47,52 L52.5,58.5 L64,45 L68.5,49.5 L52.5,67 L42.5,56.5 Z" />
+</vector>

@@ -1,0 +1,116 @@
+/**
+ * 银盾智鉴 · 管理端设计变量（Design Tokens）
+ *
+ * 与 Android 端 ui/theme/Color.kt、Dimens.kt 保持同一套取值口径：
+ * - 品牌主色 #174A71，交互主色 #176497
+ * - 安全 #25845E / 警示 #D8A03A / 危险 #C83C3C
+ *
+ * 约束：业务组件禁止硬编码颜色、字号、圆角、阴影，统一引用 --ss-* 变量。
+ * 管理端信息密度高于老人端，字号阶梯独立定义。
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ===== 品牌色 ===== */
+  --ss-primary: #174a71;
+  --ss-primary-hover: #1d5a87;
+  --ss-primary-pressed: #10364f;
+  --ss-primary-light: #d6e6f2;
+  --ss-primary-dark: #0f3550;
+
+  /* ===== 交互主色 ===== */
+  --ss-accent: #176497;
+  --ss-accent-hover: #1a76b3;
+  --ss-accent-pressed: #114c73;
+  --ss-accent-light: #e6f1f9;
+
+  /* ===== 语义状态色 ===== */
+  --ss-safe: #25845e;
+  --ss-safe-bg: #e3f4eb;
+  --ss-warning: #d8a03a;
+  --ss-warning-bg: #fcf2dd;
+  --ss-danger: #c83c3c;
+  --ss-danger-bg: #fbe8e8;
+  --ss-neutral: #64798a;
+  --ss-neutral-bg: #edf2f6;
+
+  /* ===== 背景 ===== */
+  --ss-bg-page: #f4f7fa;
+  --ss-bg-card: #ffffff;
+  --ss-bg-subtle: #f7fafc;
+  --ss-bg-hover: #f0f5fa;
+  --ss-bg-pressed: #e4edf5;
+  --ss-bg-disabled: #e9eff4;
+  --ss-bg-mask: rgba(17, 33, 45, 0.45);
+
+  /* ===== 文字 ===== */
+  --ss-text-primary: #11212d;
+  --ss-text-secondary: #51636f;
+  --ss-text-tertiary: #7f8f9b;
+  --ss-text-disabled: #9aaab5;
+  --ss-text-inverse: #ffffff;
+
+  /* ===== 边框与分割线 ===== */
+  --ss-border: #dbe5ee;
+  --ss-border-strong: #c4d3e0;
+  --ss-divider: #edf2f7;
+
+  /* ===== 焦点与遮罩 ===== */
+  --ss-focus-ring: rgba(23, 100, 151, 0.32);
+
+  /* ===== 字体 ===== */
+  --ss-font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', 'Noto Sans SC',
+    system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ss-font-mono: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+
+  --ss-font-size-display: 34px;
+  --ss-font-size-h1: 28px;
+  --ss-font-size-h2: 24px;
+  --ss-font-size-h3: 20px;
+  --ss-font-size-body-lg: 16px;
+  --ss-font-size-body: 15px;
+  --ss-font-size-sm: 13px;
+  --ss-font-size-xs: 12px;
+
+  --ss-font-weight-regular: 400;
+  --ss-font-weight-medium: 500;
+  --ss-font-weight-semibold: 600;
+
+  --ss-line-height-tight: 1.35;
+  --ss-line-height-base: 1.6;
+
+  /* ===== 间距阶梯（4 的倍数） ===== */
+  --ss-space-1: 4px;
+  --ss-space-2: 8px;
+  --ss-space-3: 12px;
+  --ss-space-4: 16px;
+  --ss-space-5: 20px;
+  --ss-space-6: 24px;
+  --ss-space-8: 32px;
+  --ss-space-10: 40px;
+
+  /* ===== 圆角 ===== */
+  --ss-radius-xs: 4px;
+  --ss-radius-sm: 6px;
+  --ss-radius-md: 8px;
+  --ss-radius-lg: 12px;
+  --ss-radius-xl: 16px;
+  --ss-radius-pill: 999px;
+
+  /* ===== 阴影（克制使用，仅用于分层） ===== */
+  --ss-shadow-sm: 0 1px 2px rgba(17, 33, 45, 0.06);
+  --ss-shadow-md: 0 4px 12px rgba(17, 33, 45, 0.08);
+  --ss-shadow-lg: 0 8px 24px rgba(17, 33, 45, 0.1);
+
+  /* ===== 控件尺寸 ===== */
+  --ss-control-sm: 32px;
+  --ss-control-md: 36px;
+  --ss-control-lg: 40px;
+
+  /* ===== 布局尺寸 ===== */
+  --ss-page-max-width: 1440px;
+  --ss-page-padding: 24px;
+  --ss-header-height: 64px;
+  --ss-sidebar-width: 216px;
+}

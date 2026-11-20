@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基础主题：仅提供窗口与系统栏外观，界面全部由 Compose 绘制 -->
+    <style name="Theme.SilverShield" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/brand_primary_dark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">银盾智鉴</string>
+
+    <!-- P02 设计系统：风险等级 -->
+    <string name="risk_level_low">低风险</string>
+    <string name="risk_level_medium">中风险</string>
+    <string name="risk_level_high">高风险</string>
+    <string name="risk_level_unknown">待评估</string>
+
+    <!-- P02 设计系统：通用状态文案 -->
+    <string name="state_loading">正在加载…</string>
+    <string name="state_retry">重新加载</string>
+    <string name="state_empty_title">暂无数据</string>
+    <string name="state_empty_description">当前没有可展示的内容。</string>
+
+    <string name="error_load_title">加载失败</string>
+    <string name="error_load_description">数据未能成功加载，请稍后重试。</string>
+    <string name="error_network_title">网络连接异常</string>
+    <string name="error_network_description">请确认手机网络已连接，然后重新加载。</string>
+    <string name="error_permission_title">权限不足</string>
+    <string name="error_permission_description">当前账号无权访问此内容，如需帮助请联系家人或管理员。</string>
+    <string name="error_unknown_title">出现未知问题</string>
+    <string name="error_unknown_description">请稍后重试，若问题持续出现请联系技术支持。</string>
+
+    <!-- P02 设计系统：开发预览入口（仅 Debug 构建可见） -->
+    <string name="dev_gallery_entry">设计系统预览（仅开发版）</string>
+    <string name="dev_gallery_title">设计系统 · 组件预览</string>
+    <string name="dev_gallery_notice">本页仅用于开发阶段检查组件样式，所有示例文案均为占位内容，不代表真实业务数据。</string>
+</resources>

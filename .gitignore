@@ -1,0 +1,88 @@
+# 银盾智鉴 · 统一忽略规则
+# 目标：排除依赖目录、编译产物、密钥、环境配置与本地文件
+
+# ---------- 操作系统 / 编辑器 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+
+# ---------- 密钥与本地环境（禁止提交） ----------
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+local.properties
+*.properties.local
+secrets/
+
+# ---------- Gradle / Android ----------
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.hprof
+output-metadata.json
+
+# ---------- Node / Web ----------
+node_modules/
+dist/
+dist-ssr/
+.vite/
+.playwright-cli/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+coverage/
+
+# ---------- Python / 业务后端 ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# ---------- 机器学习产物（不入库） ----------
+ml/datasets/raw/
+ml/datasets/processed/
+ml/datasets/interim/
+ml/training/artifacts/
+ml/**/checkpoints/
+ml/**/runs/
+ml/**/*.pt
+ml/**/*.pth
+ml/**/*.onnx
+ml/**/*.tflite
+ml/**/*.bin
+# 开发公钥可公开，用于校验模型清单签名（私钥仍由 *.pem 排除）
+!ml/training/keys/dev_ed25519_public.pem
+
+# ---------- 交付截图（本轮不入库） ----------
+docs/previews/**
+
+# ---------- 业务后端本地数据 ----------
+services/business-api/data/
+services/business-api/.venv/
+
+# ---------- 本地临时文件 ----------
+*.tmp
+*.bak
+*.swp
+*.log

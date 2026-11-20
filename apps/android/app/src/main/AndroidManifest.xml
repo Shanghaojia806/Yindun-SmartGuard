@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        P05 真实屏幕采集 PoC 所需权限：
+        - FOREGROUND_SERVICE / FOREGROUND_SERVICE_MEDIA_PROJECTION：MediaProjection 前台服务；
+        - POST_NOTIFICATIONS：展示采集中的常驻通知与停止入口（Android 13+）。
+        不申请无障碍、不申请网络业务权限、不申请存储权限。
+    -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!--
+        P06 语音播报：使用系统 TTS 引擎朗读风险提醒。
+        Android 11+ 需要声明查询条件，否则无法发现已安装的语音引擎；
+        不申请任何录音或麦克风权限。
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SilverShield">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SilverShield">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            P05 MediaProjection 前台服务：
+            - foregroundServiceType 必须为 mediaProjection（Android 14+ 强制）；
+            - exported=false，仅应用内可启动；
+            - stopWithTask=true，用户移除任务时立即结束采集，不留后台录屏。
+        -->
+        <service
+            android:name=".guard.capture.ScreenCaptureService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection"
+            android:stopWithTask="true" />
+    </application>
+
+</manifest>

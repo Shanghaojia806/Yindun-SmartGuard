@@ -1,0 +1,166 @@
+/**
+ * Element Plus 主题桥接
+ *
+ * 将 Element Plus 的 --el-* 变量映射到本项目 --ss-* 设计变量，
+ * 避免维护两套互相冲突的主题。业务页面优先使用 --ss-*，
+ * 使用 Element Plus 组件时其默认视觉自动与本项目规范一致。
+ *
+ * 说明：Element Plus 的 light-3/5/7/8/9 与 dark-2 为其内部混色结果，
+ * 此处按同一混色规则预先计算为静态色值，保证按钮悬浮态与品牌色一致。
+ */
+
+:root {
+  /* ===== 主色 ===== */
+  --el-color-primary: var(--ss-primary);
+  --el-color-primary-light-3: #5d809c;
+  --el-color-primary-light-5: #8ba4b8;
+  --el-color-primary-light-7: #b9c9d4;
+  --el-color-primary-light-8: #d1dbe3;
+  --el-color-primary-light-9: #e8edf1;
+  --el-color-primary-dark-2: #123b5a;
+
+  /* ===== 成功 / 安全 ===== */
+  --el-color-success: var(--ss-safe);
+  --el-color-success-light-3: #66a98e;
+  --el-color-success-light-5: #92c2af;
+  --el-color-success-light-7: #bedacf;
+  --el-color-success-light-8: #d3e6df;
+  --el-color-success-light-9: #e9f3ef;
+  --el-color-success-dark-2: #1e6a4b;
+
+  /* ===== 警告 ===== */
+  --el-color-warning: var(--ss-warning);
+  --el-color-warning-light-3: #e4bd75;
+  --el-color-warning-light-5: #ecd09d;
+  --el-color-warning-light-7: #f3e3c4;
+  --el-color-warning-light-8: #f7ecd8;
+  --el-color-warning-light-9: #fbf6eb;
+  --el-color-warning-dark-2: #ad802e;
+
+  /* ===== 危险 / 错误 ===== */
+  --el-color-danger: var(--ss-danger);
+  --el-color-danger-light-3: #d97777;
+  --el-color-danger-light-5: #e49e9e;
+  --el-color-danger-light-7: #efc5c5;
+  --el-color-danger-light-8: #f4d8d8;
+  --el-color-danger-light-9: #faecec;
+  --el-color-danger-dark-2: #a03030;
+
+  --el-color-error: var(--ss-danger);
+  --el-color-error-light-3: #d97777;
+  --el-color-error-light-5: #e49e9e;
+  --el-color-error-light-7: #efc5c5;
+  --el-color-error-light-8: #f4d8d8;
+  --el-color-error-light-9: #faecec;
+  --el-color-error-dark-2: #a03030;
+
+  /* ===== 信息 / 中性 ===== */
+  --el-color-info: var(--ss-neutral);
+  --el-color-info-light-3: #93a1ad;
+  --el-color-info-light-5: #b2bcc5;
+  --el-color-info-light-7: #d1d7dc;
+  --el-color-info-light-8: #e0e4e8;
+  --el-color-info-light-9: #f0f2f3;
+  --el-color-info-dark-2: #50616e;
+
+  /* ===== 文字 ===== */
+  --el-text-color-primary: var(--ss-text-primary);
+  --el-text-color-regular: var(--ss-text-primary);
+  --el-text-color-secondary: var(--ss-text-secondary);
+  --el-text-color-placeholder: var(--ss-text-tertiary);
+  --el-text-color-disabled: var(--ss-text-disabled);
+
+  /* ===== 背景 ===== */
+  --el-bg-color: var(--ss-bg-card);
+  --el-bg-color-page: var(--ss-bg-page);
+  --el-bg-color-overlay: var(--ss-bg-card);
+
+  /* ===== 边框 ===== */
+  --el-border-color: var(--ss-border);
+  --el-border-color-light: var(--ss-border);
+  --el-border-color-lighter: var(--ss-divider);
+  --el-border-color-extra-light: var(--ss-divider);
+  --el-border-color-dark: var(--ss-border-strong);
+  --el-border-color-darker: var(--ss-border-strong);
+  --el-border-color-hover: var(--ss-border-strong);
+
+  /* ===== 填充 ===== */
+  --el-fill-color: var(--ss-bg-subtle);
+  --el-fill-color-light: var(--ss-bg-hover);
+  --el-fill-color-lighter: var(--ss-bg-subtle);
+  --el-fill-color-extra-light: var(--ss-bg-subtle);
+  --el-fill-color-dark: var(--ss-bg-pressed);
+  --el-fill-color-darker: var(--ss-bg-pressed);
+  --el-fill-color-blank: var(--ss-bg-card);
+
+  /* ===== 禁用 ===== */
+  --el-disabled-bg-color: var(--ss-bg-disabled);
+  --el-disabled-text-color: var(--ss-text-disabled);
+  --el-disabled-border-color: var(--ss-border);
+
+  /* ===== 圆角 ===== */
+  --el-border-radius-base: var(--ss-radius-md);
+  --el-border-radius-small: var(--ss-radius-sm);
+  --el-border-radius-round: var(--ss-radius-pill);
+  --el-border-radius-circle: 50%;
+
+  /* ===== 字体 ===== */
+  --el-font-family: var(--ss-font-family);
+  --el-font-size-base: var(--ss-font-size-body);
+  --el-font-size-small: var(--ss-font-size-sm);
+  --el-font-size-large: var(--ss-font-size-body-lg);
+
+  /* ===== 阴影 ===== */
+  --el-box-shadow: var(--ss-shadow-md);
+  --el-box-shadow-light: var(--ss-shadow-sm);
+  --el-box-shadow-lighter: var(--ss-shadow-sm);
+  --el-box-shadow-dark: var(--ss-shadow-lg);
+
+  /* ===== 遮罩 ===== */
+  --el-mask-color: rgba(255, 255, 255, 0.9);
+  --el-overlay-color-lighter: var(--ss-bg-mask);
+}
+
+/* 按钮：统一控件高度与语义配色，避免与 Element 默认的亮蓝色冲突 */
+.el-button {
+  --el-button-hover-bg-color: var(--ss-bg-hover);
+  --el-button-hover-border-color: var(--ss-border-strong);
+  --el-button-hover-text-color: var(--ss-primary);
+  font-weight: var(--ss-font-weight-medium);
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--ss-primary);
+  --el-button-border-color: var(--ss-primary);
+  --el-button-hover-bg-color: var(--ss-primary-hover);
+  --el-button-hover-border-color: var(--ss-primary-hover);
+  --el-button-active-bg-color: var(--ss-primary-pressed);
+  --el-button-active-border-color: var(--ss-primary-pressed);
+}
+
+/* 卡片：统一圆角与描边，弱化阴影 */
+.el-card {
+  --el-card-border-radius: var(--ss-radius-lg);
+  border-color: var(--ss-border);
+}
+
+/* 表格：统一表头底色与分割线 */
+.el-table {
+  --el-table-header-bg-color: var(--ss-bg-subtle);
+  --el-table-border-color: var(--ss-divider);
+  --el-table-row-hover-bg-color: var(--ss-bg-hover);
+  --el-table-header-text-color: var(--ss-text-secondary);
+  color: var(--ss-text-primary);
+}
+
+/* 输入类控件：统一高度与焦点色 */
+.el-input__wrapper,
+.el-select__wrapper {
+  border-radius: var(--ss-radius-md);
+  box-shadow: 0 0 0 1px var(--ss-border) inset;
+}
+
+.el-input__wrapper.is-focus,
+.el-select__wrapper.is-focused {
+  box-shadow: 0 0 0 1px var(--ss-accent) inset;
+}
