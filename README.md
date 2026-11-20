@@ -2,6 +2,8 @@
 
 面向老年群体的短视频多模态反诈交互系统。
 
+An AI identity verification and anti-fraud monitoring HarmonyOS application for elderly care scenarios.
+
 老人端与家属端共用同一个原生 Android App（按登录角色进入不同界面），管理侧为独立的 Web 后台，
 业务后端为 FastAPI 服务，AI 模型由团队自主训练、最终部署到老人手机本地推理，
 不调用商业 AI 识别 API，不依赖短视频平台私有接口。
